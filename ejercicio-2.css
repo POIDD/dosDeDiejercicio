@@ -1,0 +1,153 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.grid-container>*{
+    box-shadow: -1px 6px 7px 0px black;
+    border-radius: 4px;
+    padding: 10px;
+    text-align: center;
+    
+}
+
+.header{
+    grid-area: header;
+    background-color: white;
+}
+
+.main{
+    grid-area: main;
+    background-color: white;
+}
+
+.section{
+    background-color:white;
+    grid-area: section;
+
+}
+
+.footer{
+    grid-area: footer;
+    background-color: black;
+}
+
+
+
+
+.grid-container{
+    display: grid;
+    gap:10px ;
+    grid-template-areas: 
+         "header"
+         "main"
+         "section"
+         "footer"
+    ;
+}
+
+
+
+
+
+
+.grid-container {
+    grid-template: 
+        "header header" 170px   
+        "main main" 490px
+        "section section"150px
+        "footer footer" 150px /
+        200px auto;
+
+}
+
+
+
+
+
+
+/* imagen del hader */
+.header img {
+    width: 200px;
+    height:160px;
+    float: left;
+
+}
+h1{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+/* slider */
+
+
+.slider{
+    grid-area: slider;
+}
+/* aca de define el tamano del slider  */
+.slider {
+    text-align: center;
+    overflow: hidden;
+    height: 600px;
+    width: 1000px;
+    margin: 0px auto;
+
+
+    
+    
+}
+
+#imagenes {
+    margin: 0;
+    left: 0;
+    display: flex;
+    width: 500%;
+    height: 100%;
+    animation: 15s slidy infinite alternate linear;
+    animation-timing-function: step-start;
+}
+
+li {
+    width: 100%;
+    list-style-type: none;
+}
+
+img {
+    object-fit: cover;
+    width: 90%;
+    height: 70%;
+    border-radius: 4px;
+}
+
+@keyframes slidy {
+    0% {
+        margin-left: 0;
+    }
+    20% {
+        margin-left: 0;
+    }
+    40% {
+        margin-left: -100%;
+    }
+    60% {
+        margin-left: -100%;
+    }
+    70% {
+        margin-left: -200%;
+    }
+    80% {
+        margin-left: -200%;
+    }
+    90% {
+        margin-left: -300%;
+    }
+    100% {
+        margin-left: -400%;
+    }
+}
+/* imagen del footer */
+.footer img{
+    width: 150px;
+    height: 150px;
+}
